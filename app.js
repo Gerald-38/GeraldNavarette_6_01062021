@@ -6,18 +6,18 @@ const userRoutes = require('./routes/user');
 const session = require('cookie-session');
 const nocache = require('nocache');
 const path = require('path');
+require('dotenv').config()
 "use strict"
 
 
-const app = express();
-
-mongoose.connect('mongodb+srv://database_manager:dbmanager@cluster0.t6got.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(process.env.DB_URI,
   { useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex:true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
+  const app = express();
 
 // Middleware Header pour contourner les erreurs en débloquant certains systèmes de sécurité CORS, afin que tout le monde puisse faire des requetes depuis son navigateur
 app.use((req, res, next) => {

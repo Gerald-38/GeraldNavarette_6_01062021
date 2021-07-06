@@ -1,14 +1,33 @@
 
-const User = require ('../models/User');
-const mongoose = require('mongoose')
-const {body} = require('express-validator');
-"use strict";
+// const User = require ('../models/User');
+// const mongoose = require('mongoose')
+// const {body} = require('express-validator');
+// "use strict";
 
-const message = "Email and incorrect. Please try with a valid mail";
-exports.checkEmail = [
-	body('email').isEmail().withMessage(message),
-]
+// const message = "Email and incorrect. Please try with a valid mail";
+// exports.checkEmail = [
+// 	body('email').isEmail().withMessage(message),
+// ]
 
+
+
+// const User = require ('../models/User');
+// const mongoose = require('mongoose')
+// const {check, validationResult} = require('express-validator');
+// "use strict";
+
+// const message = "Email and incorrect. Please try with a valid mail";
+// exports.checkEmail = (req,res,next) => {
+// 	check('email').isEmail().withMessage(message);
+
+// 	let errors = validationResult(req);
+// 	console.log(errors);
+//     if (!errors.isEmpty()) {
+//       return res.status(400).json({ errors: errors.array() });
+//     } else {
+// 		next()
+// 	}
+// }
 
 
 
