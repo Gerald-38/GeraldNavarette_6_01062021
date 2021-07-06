@@ -1,4 +1,5 @@
 const validate = require('mongoose-validator'); // Appel du plugin mongoose-validator
+"use strict";
 
 exports.nameValidator = [ // Validation du champ 'nom de la sauce'
   validate({

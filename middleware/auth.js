@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+"use strict";
 
 module.exports = (req, res, next) => {
   try {

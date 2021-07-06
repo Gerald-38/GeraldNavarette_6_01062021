@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // const uniqueValidator = require('mongoose-unique-validator');
-"use strict";  //mod
+"use strict";  
 
 const userSchema = mongoose.Schema({
   email: { type: String, require: true, unique: true },

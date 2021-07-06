@@ -1,4 +1,5 @@
-const passwordValidator = require('password-validator');  
+const passwordValidator = require('password-validator'); 
+"use strict"; 
 
 const passwordSchema = new passwordValidator();
 

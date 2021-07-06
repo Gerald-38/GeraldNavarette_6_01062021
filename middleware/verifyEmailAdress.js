@@ -1,7 +1,6 @@
 
 const User = require ('../models/User');
-var mongoose = require('mongoose')
-// var validate = require('mongoose-validator')
+const mongoose = require('mongoose')
 const {body} = require('express-validator');
 "use strict";
 
