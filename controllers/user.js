@@ -23,12 +23,12 @@ exports.signup = (req, res, next) => {
           message: 'Utilisateur créé !'
         }))
         .catch(error => res.status(400).json({
-          error,          
+          error,
+          //message: 'Utilisateur déjà créé'           
         })); // Si il existe déjà un utilisateur avec cette adresse email
     })
     .catch(error => res.status(500).json({
       error,
-      message: 'Utilisateur déjà créé'  
     }));
 };
 
