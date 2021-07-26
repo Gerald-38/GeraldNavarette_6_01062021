@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
 userSchema.plugin(uniqueValidator);
 
 // Plugin pour Mongoose qui purifie les champs du model avant de les enregistrer dans la base MongoDB.
-// On utilise le HTML Sanitizer de Google Caja pour effectuer cette désinfection.
+// s'assurer que les données venant du front end ne font pas l'objet d'injections qui peuvent créer des attaques non sql.
 userSchema.plugin(sanitizerPlugin);
 
 module.exports = mongoose.model('User', userSchema);
