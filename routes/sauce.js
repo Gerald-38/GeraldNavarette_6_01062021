@@ -5,7 +5,6 @@ const multer = require('../middleware/multer-config');
 const sauceCtrl = require('../controllers/sauce');
 "use strict";
 
-// const validateSauce = require('../middleware/validateSauce');
 
 router.get('/', auth, sauceCtrl.getAllSauce);
 router.post('/', auth, multer, sauceCtrl.createSauce);

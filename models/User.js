@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 require('mongoose-type-email');
-// Package pour vérifier que l'email n'est pas déjà enregistré
 const uniqueValidator = require('mongoose-unique-validator');
 const sanitizerPlugin = require('mongoose-sanitizer-plugin');
-// const validate = require('mongoose-validator');
 "use strict";  
 
 const userSchema = mongoose.Schema({
